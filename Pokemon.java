@@ -1,3 +1,5 @@
+
+
 import java.util.ArrayList;
 
 /*
@@ -15,16 +17,29 @@ import java.util.ArrayList;
  */
 public class Pokemon {
 	public String name;
-	public ArrayList<String> possible;
+	public ArrayList<String> possibleMoves;
 	public String tier;
+	public ArrayList<String> possibleAbilities;
+	public String[] type;
+	public int num;
+	public int []stats;
 	
+	
+	public Pokemon(){
+		type = new String[2];
+		stats= new int[6];
+	}
 	public Pokemon(String name) {
 		this.name = name;
+		type = new String[2];
+		stats= new int[6];
 	}
 	
 	public Pokemon(String name, ArrayList<String> possible, String tier) {
 		this.name = name;
-		this.possible = possible;
+		this.possibleMoves = possible;
 		this.tier = tier;
+		type = new String[2];
+		stats = new int[6];
 	}
 }
